@@ -76,7 +76,7 @@ async def async_main() -> None:
         await session.run_sync(work_with_a_session_two, param="foo")
 
         # EXPECTED_MYPY: Missing positional argument "foo" in call to "run_sync" of "AsyncSession"
-        await session.run_sync(work_with_wrong_parameter)
+        await session.run_sync(work_with_wrong_parameter)  # pyrefly: ignore
 
         session.add_all(
             [

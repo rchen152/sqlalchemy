@@ -99,7 +99,7 @@ with Session(e) as sess:
     sess.query(User).update(
         {"name": User.name + " some name"},
         # EXPECTED_MYPY: Argument "synchronize_session" to "update" of "Query" has incompatible type  # noqa: E501
-        synchronize_session="invalid",
+        synchronize_session="invalid",  # pyrefly: ignore
     )
     sess.query(User).update({"name": User.name + " some name"})
 

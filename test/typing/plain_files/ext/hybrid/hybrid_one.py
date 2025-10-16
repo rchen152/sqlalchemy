@@ -61,10 +61,10 @@ expr4 = Interval.fancy_thing(10, 12, 15)
 # test that pep-612 actually works
 
 # EXPECTED_MYPY: Too few arguments
-Interval.fancy_thing(1, 2)
+Interval.fancy_thing(1, 2)  # pyrefly: ignore
 
 # EXPECTED_MYPY: Argument 2 has incompatible type
-Interval.fancy_thing(1, "foo", 3)
+Interval.fancy_thing(1, "foo", 3)  # pyrefly: ignore
 
 stmt1 = select(Interval).where(expr1).where(expr4)
 

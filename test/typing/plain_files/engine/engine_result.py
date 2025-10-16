@@ -17,9 +17,9 @@ def row_one(row: Row[int, str, bool]) -> None:
     assert_type(row[2], bool)
 
     # EXPECTED_MYPY: Tuple index out of range
-    row[3]
+    row[3]  # pyrefly: ignore
     # EXPECTED_MYPY: No overload variant of "__getitem__" of "tuple" matches argument type "str"  # noqa: E501
-    row["a"]
+    row["a"]  # pyrefly: ignore
 
     assert_type(row._mapping, RowMapping)
     rm = row._mapping
@@ -27,7 +27,7 @@ def row_one(row: Row[int, str, bool]) -> None:
     assert_type(rm[column("bar")], Any)
 
     # EXPECTED_MYPY_RE: Invalid index type "int" for "RowMapping"; expected type ".*"  # noqa: E501
-    rm[3]
+    rm[3]  # pyrefly: ignore
 
 
 def result_one(res: Result[int, str]) -> None:

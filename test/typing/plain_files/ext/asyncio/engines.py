@@ -65,7 +65,7 @@ async def asyncio() -> None:
         await conn.run_sync(work_sync, 1)
 
         # EXPECTED_MYPY: Missing positional argument "foo" in call to "run_sync" of "AsyncConnection"
-        await conn.run_sync(work_sync)
+        await conn.run_sync(work_sync)  # pyrefly: ignore
 
     ce = select(1).compile(e)
     ce.statement

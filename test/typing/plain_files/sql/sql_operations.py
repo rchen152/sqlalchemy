@@ -52,10 +52,10 @@ short_cir3 = and_(true(), c2 == 5)
 short_cir4 = or_(false(), c2 == 5)
 
 # EXPECTED_MYPY: Missing positional argument "initial_clause" in call to "and_"
-no_empty_1 = and_()
+no_empty_1 = and_()  # pyrefly: ignore
 
 # EXPECTED_MYPY: Missing positional argument "initial_clause" in call to "or_"
-no_empty_2 = or_()
+no_empty_2 = or_()  # pyrefly: ignore
 
 expr3 = c2 / 5
 

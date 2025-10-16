@@ -76,55 +76,55 @@ def load_options_ok() -> None:
 def load_options_error() -> None:
     select(B).options(
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.contains_eager("foo"),
+        orm.contains_eager("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.load_only("foo"),
+        orm.load_only("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.joinedload("foo"),
+        orm.joinedload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.subqueryload("foo"),
+        orm.subqueryload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.selectinload("foo"),
+        orm.selectinload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.lazyload("foo"),
+        orm.lazyload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.immediateload("foo"),
+        orm.immediateload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.noload("foo"),
+        orm.noload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.raiseload("foo"),
+        orm.raiseload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.defaultload("foo"),
+        orm.defaultload("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.defer("foo"),
+        orm.defer("foo"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.undefer("foo"),
+        orm.undefer("foo"),  # pyrefly: ignore
     )
     select(B).options(
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.contains_eager(B.a).contains_eager("bar"),
+        orm.contains_eager(B.a).contains_eager("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.load_only(B.a).load_only("bar"),
+        orm.load_only(B.a).load_only("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.joinedload(B.a).joinedload("bar"),
+        orm.joinedload(B.a).joinedload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.subqueryload(B.a).subqueryload("bar"),
+        orm.subqueryload(B.a).subqueryload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.selectinload(B.a).selectinload("bar"),
+        orm.selectinload(B.a).selectinload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.lazyload(B.a).lazyload("bar"),
+        orm.lazyload(B.a).lazyload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.immediateload(B.a).immediateload("bar"),
+        orm.immediateload(B.a).immediateload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.noload(B.a).noload("bar"),
+        orm.noload(B.a).noload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.raiseload(B.a).raiseload("bar"),
+        orm.raiseload(B.a).raiseload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.defaultload(B.a).defaultload("bar"),
+        orm.defaultload(B.a).defaultload("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.defer(B.a).defer("bar"),
+        orm.defer(B.a).defer("bar"),  # pyrefly: ignore
         # EXPECTED_MYPY_RE: Argument 1 to .* has incompatible type .*
-        orm.undefer(B.a).undefer("bar"),
+        orm.undefer(B.a).undefer("bar"),  # pyrefly: ignore
     )
 
 
